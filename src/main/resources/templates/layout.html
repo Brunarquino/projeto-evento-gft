@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http:.org" xmlns:layot="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos GFT</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link th:href="@{/css/css.css}" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="icon-gft" sec:authorize="isAuthenticated()">
+		<img th:src="@{/images/icons/iconGFT.png}">
+	</div>
+	<div id="espaco-menu" sec:authorize="isAuthenticated()">
+	</div>
+	<div id="menu" sec:authorize="isAuthenticated()">
+		<nav class="navbar navbar-expand-lg mb-4 nav-color-bg">
+			<div class="container-fluid">
+				<div id="gft-navbar" class="navbar-brand color-white">GFT</div>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link active " aria-current="page"
+								th:href="@{/evento/home}">Home</a></li>
+						<li class="nav-item"><a class="nav-link active" aria-current="page"
+								th:href="@{/evento/etapaUm}">Criar Eventos</a></li>
+						<li class="nav-item"><a class="nav-link active" aria-current="page" th:href="@{/evento}">Listar
+								Eventos</a></li>
+								
+						<!--
+						<li class="nav-item" id="align-perfil">
+							<form action="/logout" method="post">
+							<button type="submit">Sair do usuario <span sec:authentication="name"></span></button>
+						</li>
+						
+						-->
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div id="conteudo" class="container" layout:fragment="content"></div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<div layout:fragment="scripts"></div>
+</body>
+
+</html>

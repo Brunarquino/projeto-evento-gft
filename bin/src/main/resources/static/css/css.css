@@ -1,0 +1,325 @@
+:root {
+	--corA: #213E7F;
+	--corA1: #0E1A36;
+	--corA2: #0e1a366b;
+	--corB: #288BE4;
+	--corC: #A9DDFA;
+	--corD: #001E44;
+	--corE: #606B94;
+	--corE1: #606b948f;
+	--branco: #FFFFFF;
+	--verde: #1FC43E;
+	--vermelho: red;
+}
+
+/*Index*/
+.backround-color-B {
+	background-color: var(--corB);
+}
+.flex-box-1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+#bloco-1-index, #bloco-2-index{
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#bloco-2-index{
+	color: var(--branco);
+}
+#bloco-2-index a{
+	color: var(--corA);
+	padding: 10px 20px;
+	width: 300px;
+	font-weight: 500;
+	font-size: 17px;
+	margin-top: 30px;
+}
+
+#img-index-1 {
+	width: 25%;
+}
+#img-index-2 {
+	width: 60%;
+}
+/*Layout - Menu - Geral*/
+#menu {
+	position: fixed;
+	top:0;
+	width: 100%;
+	z-index: 10;
+}
+#espaco-menu {
+	width: 100%;
+	height: 69px;
+}
+.nav-color-bg{
+	background-color: var(--corA);
+	box-shadow: 5px 5px 10px var(--corA2);
+}
+.color-white, #navbarNavDropdown a{
+	color: var(--branco);
+}
+#gft-navbar {
+	font-size: 25px;
+	font-weight: 500;
+}
+#gft-navbar:hover {
+	color: var(--corE);
+}
+
+.navbar-nav {
+	width: 100%;
+}
+#icon-gft{
+	width: 50px;
+	position: fixed;
+	float:none;
+	right: 0;
+	bottom: 0;
+	margin: 0 10px 10px 0;
+}
+#icon-gft img {
+	width: 100%;
+	z-index: 10;
+}
+#align-perfil {
+	margin-left: auto;
+}
+/*Cards Form*/
+.g6-card-forms-container-a, .g6-card-forms-container-b{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-width: 350px;
+}
+.g6-card-forms-container-a{
+	max-width: 550px;
+	height: 100vh;
+}
+.g6-card-forms-container-b{
+	max-width: 800px;
+	height: 89vh;
+}
+.g6-main-card {
+	box-shadow: 5px 5px 10px var(--corA2);
+	width: 100%;
+	overflow: auto;
+}
+.g6-main-card-login, .g6-main-card-cadastro{
+	height: 100vh;
+}
+.g6-main-card-login{
+	max-height: 650px;
+}
+.g6-main-card-cadastro {
+	max-height: 750px;
+}
+.g6-main-card-cadastro-evento {
+	max-height: 650px;
+	height: 95vh;
+}
+.g6-card-header-title-b1{
+	background-color: var(--corA);
+	opacity: 0.3;
+	border-bottom: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	color: var(--branco);
+	opacity: 1.0;
+}
+.g6-card-header-title-b2 {
+	background-color: white;
+	border-bottom: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.g6-title-card-header-b2{
+	color: var(--corA);
+	display: inline;
+	align-self: flex-end;
+	padding-top: 20px;
+	margin-bottom: 0;
+	text-align: center;
+}
+#logo-gft-card-form{
+	width: 140px;
+}
+.card-text-entrar-cadastrar {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+.g6-form-card {
+	color: var(--corA);
+	display: flex;
+	flex-direction: column;
+	padding: 0 40px;
+}
+.g6-form-card table{
+	text-align: center;
+}
+.table-card-forms thead tr th{
+	color: var(--corA);
+}
+.g6-btn-card-forms {
+	background-color: var(--corA);
+	color: var(--branco);
+	font-weight: 500;
+	box-align: right;
+	align-self: center;
+	width: 100%;
+	border-radius: 2px;
+}
+.g6-btn-card-forms:hover{
+	background-color: var(--corA1);
+	color: var(--branco);
+}
+.color-red {
+	color: var(--vermelho);
+}
+/*Etapas Cadastrar Eventos*/
+#etapas{
+	width: 95%;
+	margin-bottom: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+#etapas span {
+	width: 32%;
+	height: 3px;
+}
+.e1 {
+	background-color: var(--corA2);
+}
+.e2 {
+	background-color: var(--corC);
+}
+.e3 {
+	background-color: var(--corA);
+}
+/*Lista De dias - Criação de Eventos*/
+.adicionar-overflow-auto{
+	overflow: auto;
+	height: 30vh;
+}
+
+.listar-atividades-do-dia {
+	height: 13vh;
+}
+
+.g6-margin-top {
+	padding-top: 30px;
+}
+/*Ranking*/
+.g6-card-ranking{
+	width: 100%;
+	text-align: center;
+}
+.g6-card-title-ranking, .g6-card-ranking th{
+	color: var(--corA);
+}
+.g6-width-30-porcento{
+	width: 30%;
+}
+.g6-flex-box-row{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+}
+.g6-btn-ranking {
+	width: 48%;
+}
+.g6-align-objects-center-column{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+}
+.g6-td-sem-borda{
+	border-color: white;
+}
+
+/*Home*/
+.g6-home-conteudo-principal{
+	display: flex;
+	width: 100%;
+	height: 80vh;
+	align-items: center;
+	justify-content: center;
+}
+.g6-btns-home-div{
+	display: flex;
+	width: 50%;
+	justify-content: space-around;
+}
+.g6-btns-home{
+	background-color: var(--corB);
+	width: 48%;
+	height: 45px;
+	color: var(--branco);
+	font-weight: 500;
+	padding: 8px 20px;
+	border-radius: 2px;
+}
+.g6-btns-home:hover{
+	border-color: var(--corB);
+	color: var(--corB);
+	width: 48.5%;
+	height: 46px;
+	transition: 2s;
+}
+/*botões de listar*/
+.g6-btns-listar{
+	background-color: var(--corB);
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--branco);
+	padding: 10px 10px;
+	border-radius: 2px;
+}
+.g6-btns-listar:hover{
+	border-color: var(--corB);
+	color: var(--corB);
+}
+/*listar eventos*/
+.g6-negrito {
+	font-weight: 500;
+}
+.g6-div-criterios-de-avaliacao{
+	width: 100%;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.g6-card-criterios-de-avaliacao {
+	width: 60%;
+	align-items: center;
+	justify-items: center;
+	
+}
+
+.g6-card-criterios-de-avaliacao .card-title{
+	color:var(--corA);
+	margin-top: 10px;
+}
+
+.g6-card-criterios-de-avaliacao .card-body {
+	width: 95%;
+}

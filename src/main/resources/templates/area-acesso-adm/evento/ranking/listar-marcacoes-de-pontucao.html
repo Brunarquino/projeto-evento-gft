@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout.html}">
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div layout:fragment="content">
+		<div class="g6-margin-top">
+			<div th:attr="class='alert alert-'+${cor}+' d-flex justify-content-center'" th:if="${mensagem != null}"
+				th:text="${mensagem}">
+			</div>
+			<div class="alert alert-danger d-flex justify-content-center"
+				th:if="${#lists.isEmpty(pontuacaoPorGrupo.listaStatusPresenca)}">
+				Nenhum participante cadastrado no grupo
+			</div>
+
+			<div class="card g6-card-ranking" th:if="${not #lists.isEmpty(pontuacaoPorGrupo.listaStatusPresenca)}">
+				<div class="card-body">
+					<h4 class="card-title g6-card-title-ranking">Atualizar pontuação do <span
+							th:text="${pontuacaoPorGrupo.grupo.nome}"></span></h4>
+				</div>
+				<div class="card-body">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th scope="col">Dia </th>
+								<th scope="col">Opções</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="diaDeEvento, iterDia: ${pontuacaoPorGrupo.grupo.evento.listaDeDias}">
+								<td th:text="${#temporals.format(diaDeEvento.data, 'dd/MM/yyyy')}"></td>
+								<td class="g6-width-30-porcento">
+
+									<a class="btn g6-btn-card-forms g6-btn-ranking btn-sm"
+										th:href="@{'/evento/ranking/atualizarPontuacaoPresenca?idDiaDeEvento='+${diaDeEvento.id}+'&'+'idPontuacaoPorGrupo='+ ${pontuacaoPorGrupo.id}}"
+										style="padding: 5px 30px;">Presença</a>
+									<a class="btn g6-btn-card-forms g6-btn-ranking btn-sm"
+										th:href="@{'/evento/ranking/listarAtividadesDoDia?idDiaDeEvento='+${diaDeEvento.id}+'&'+'idPontuacaoPorGrupo='+ ${pontuacaoPorGrupo.id}}"
+										style="padding: 5px 30px;">Atividades</a>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>
